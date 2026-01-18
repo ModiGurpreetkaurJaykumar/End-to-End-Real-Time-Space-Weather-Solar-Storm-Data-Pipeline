@@ -33,12 +33,11 @@ Follow these steps to execute the data pipeline jobs:
 Create the topic for raw data ingestion:
 bin/kafka-topics.sh --create --topic solar-wind-raw --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-##2. Start the Data Producer
+## 2. Start the Data Producer
 Run the Python script to fetch live data from the NOAA API and push it to Kafka:
-```Bash
 python3 solar_wind_producer.py
 
-##3. Submit Spark Jobs
+## 3. Submit Spark Jobs
 Execute the processing pipeline through YARN:
 Ingest to HDFS (Bronze): spark-submit kafka_to_hdfs.py 
 Clean and Structure (Silver): spark-submit hdfs_to_silver.py 
