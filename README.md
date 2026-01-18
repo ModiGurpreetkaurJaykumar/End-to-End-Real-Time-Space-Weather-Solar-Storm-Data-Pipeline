@@ -54,7 +54,11 @@ Python: 3.9+ (Libraries: kafka-python, requests, pyspark)
 
 ## Monitoring
 The system provides several tools for real-time monitoring and resource management:
+
 Grafana Dashboard: Access at http://10.0.0.97:3000. Visualizes solar wind speed, density, temperature, and "Speed vs Density" correlations.
+
 Hadoop NameNode: Access at http://10.0.0.97:9870 to verify HDFS metadata and storage health.
+
 YARN ResourceManager: Access at http://10.0.0.97:8088 to monitor Spark job execution status.
+
 InfluxDB Explorer: Access at http://10.0.0.97:8086 to query time-series metrics directly.
