@@ -9,7 +9,9 @@ This project implements a distributed, end-to-end big data pipeline for real-tim
 The pipeline is deployed on a **2-node distributed cluster**.
 
 | Node | IP Address | Role | Services Running |
+
 | **Master** | 10.0.0.97 | Master | HDFS NameNode, SecondaryNameNode, YARN ResourceManager, Spark Master, Kafka Broker, Zookeeper, InfluxDB, Grafana |
+
 | **Worker 1** | 10.0.0.95 | Worker | HDFS DataNode, YARN NodeManager, Spark Worker |
 
 ### How to Start Services
@@ -39,17 +41,26 @@ python3 solar_wind_producer.py
 
 ## 3. Submit Spark Jobs
 Execute the processing pipeline through YARN:
+
 Ingest to HDFS (Bronze): spark-submit kafka_to_hdfs.py 
-Clean and Structure (Silver): spark-submit hdfs_to_silver.py 
+
+Clean and Structure (Silver): spark-submit hdfs_to_silver.py
+
 Export to InfluxDB (Gold): spark-submit silver_to_influx.py 
 
 ## Dependencies
 Required software versions for the project environment:
+
 Java: OpenJDK 8 or 11 
+
 Hadoop: 3.3.x 
+
 Spark: 3.x (Structured Streaming enabled) 
+
 Kafka: 2.13-3.6.0 
+
 InfluxDB: 2.x 
+
 Python: 3.9+ (Libraries: kafka-python, requests, pyspark) 
 
 ## Monitoring
