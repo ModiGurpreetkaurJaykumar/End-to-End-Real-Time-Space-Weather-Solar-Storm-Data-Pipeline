@@ -73,3 +73,6 @@ Hadoop NameNode: Access at http://10.0.0.97:9870 to verify HDFS metadata and sto
 YARN ResourceManager: Access at http://10.0.0.97:8088 to monitor Spark job execution status.
 
 InfluxDB Explorer: Access at http://10.0.0.97:8086 to query time-series metrics directly.
+
+## Demo Video Link:
+https://youtu.be/t09B8qGpZ6k
